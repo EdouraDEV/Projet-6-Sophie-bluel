@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <meta name="description" content="">
+    <script src="https://kit.fontawesome.com/5420a2db7e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a id="btn-accueil" href="./index.html">Sophie Bluel <span>Architecte d'intérieur</span></a>
+        </h1>
+        <nav>
+            <ul>
+                <li>projets</li>
+                <li>contact</li>
+                <li id="login-section">login</li>
+                <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact">
+            <h2>Log in</h2>
+            <form action="./index.html" method="post" id="form-log">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <label for="name">Mot de passe</label>
+                <input type="password" name="password" id="password">
+                <input type="submit" value="Se connecter">
+            </form>
+            <p id="password-reset">Mot de passe oublié</p>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>Mentions Légales</li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="./assets/login.js"></script>
+</body>
+
+</html>

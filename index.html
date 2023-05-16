@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+		rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/5420a2db7e.js" crossorigin="anonymous"></script>
+	<script type="module" src="./assets/script.js"></script>
+</head>
+
+<body>
+	<div class="top-container hidden">
+		<div id="top-icon"><i class="fa-sharp fa-regular fa-pen-to-square"></i></div>
+		<p class="ad-modifier"> Mode édition </p> <button class="btn-public">Publier les changements</button>
+	</div>
+	<header>
+		<h1>
+			<a id="btn-accueil" href="./index.html">Sophie Bluel <span>Architecte d'intérieur</span></a>
+		</h1>
+		<nav>
+			<ul>
+				<li>projets</li>
+				<li>contact</li>
+				<li><a id="btn-login" href="./Login.html">login</a></li>
+				<li><a id="btn-logout" href="./index.html" class="hidden">logout</a></li>
+				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="introduction">
+			<figure>
+				<img src="./assets/images/sophie-bluel.png" alt="">
+				<div class="modifier-kit-mid hidden"><span class="ad-modifier-page"><i
+							class="fa-sharp fa-regular fa-pen-to-square"></i> modifier </span></p>
+				</div>
+			</figure>
+			<article>
+				<div class="modifier-kit-top hidden"><span class="ad-modifier-page"><i
+							class="fa-sharp fa-regular fa-pen-to-square"></i> modifier </span></p>
+				</div>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison
+					finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les
+					couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du
+					chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG,
+					décorateur(trice)</p>
+			</article>
+		</section>
+
+		<section id="portfolio">
+			<div class="title-and-mod">
+				<h2>Mes Projets</h2>
+				<div class="modifier-kit-bot hidden"><i class="fa-sharp fa-solid fa-pen-to-square"></i><a href="#modal1"
+						class="js-modal"><span class="ad-modifier-page"> modifier </span></a></div>
+			</div>
+			<aside id="modal1" class="modal" aria-hidden="true" role="modal" aria-labelledby="titlemodal"
+				style="display:none">
+				<div class="modal-wrapper js-modal-stop">
+					<div class="modal-nav">
+						<button class="js-modal-close">X</button>
+						<button class="previous-modal hidden"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+					</div>
+					<h2 id="titlemodal">Galerie photo</h2>
+					<div class="img-load-container">
+					</div>
+					<form id="my-form">
+						<div class="sky-bg">
+							<div class="img-icon hide-content">
+								<i class="fa-solid fa-image"></i>
+							</div>
+							<input type="file" name="image" id="image" accept="image/*">
+							<div id="uploadedimage"></div>
+							<label for="image" class="image-text">+ Ajouter photo</label>
+							<p class="image-format">jpg, png : 4mo max</p>
+						</div>
+						<label for="title" class="form-text">Titre</label>
+						<input type="text" name="title" id="title">
+
+						<label for="category" class="form-text">Catégorie</label>
+						<select name="category" id="category">
+							<option value="1">Objets</option>
+							<option value="2">Appartements</option>
+							<option value="3">Hotels & restaurants</option>
+						</select>
+						<div class="gray-line"></div>
+						<input id="valid-photo" type="submit" value="Valider">
+					</form>
+					<div class="bottom-content">
+						<div class="gray-line"></div>
+						<button class="btn-add-modal">Ajouter une photo</button>
+						<p class="delete-all-gallery">Supprimer la galerie</p>
+					</div>
+				</div>
+			</aside>
+
+			<!--Filters Button-->
+			<div id="filtres">
+				<button id="all" class="btn-filtrer">Tous</button>
+				<button id="objects" class=" btn-filtrer ">Objets</button>
+				<button id="appartements" class="btn-filtrer">Appartement</button>
+				<button id="hotels-restaurants" class="btn-filtrer">Hôtels & restaurants</button>
+			</div>
+			<div class="gallery">
+			</div>
+		</section>
+
+		<!--Formulaire de contact-->
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>Vous avez un projet ? Discutons-en !</p>
+			<form action="#" method="post">
+				<label for="name">Nom</label>
+				<input type="text" name="name" id="name">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<input type="submit" value="Envoyer">
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
+	</footer>
+</body>
+<script src="./assets/adminApp.js"></script>
+
+</html>
