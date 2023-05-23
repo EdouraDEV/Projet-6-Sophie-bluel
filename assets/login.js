@@ -29,6 +29,11 @@ form.addEventListener("submit", async (event) => {
   } else {
     const passwordInput = document.getElementById("password");
     passwordInput.classList.add("incorrect-password");
-    console.error("Erreur lors de la connexion");
+    event.preventDefault();
+    setTimeout(function () {
+      passwordInput.classList.remove("incorrect-password");
+      console.error("Erreur lors de la connexion");
+      window.alert("Mauvais mot de passe, veuillez réessayer !");
+    }, 300);
   }
 });

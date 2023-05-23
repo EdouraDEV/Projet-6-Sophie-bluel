@@ -6,6 +6,7 @@ function checkAccess() {
   const headerMargin = document.querySelector("header");
   const btnLogin = document.getElementById("btn-login");
   const btnLogout = document.getElementById("btn-logout");
+  const filters = document.getElementById("filtres");
 
   const token = localStorage.getItem("monToken");
   if (!token) {
@@ -14,6 +15,7 @@ function checkAccess() {
     kitTop.classList.add("hidden");
     kitBottom.classList.add("hidden");
     btnLogout.classList.add("hidden");
+    filters.style.display = "flex";
     btnLogin.classList.remove("hidden");
     headerMargin.style.margin = "50px 0";
   } else {
@@ -22,6 +24,7 @@ function checkAccess() {
     kitTop.classList.remove("hidden");
     kitBottom.classList.remove("hidden");
     btnLogout.classList.remove("hidden");
+    filters.style.display = "none";
     btnLogin.classList.add("hidden");
     headerMargin.style.margin = "80px 0";
   }
@@ -45,6 +48,7 @@ async function importImages() {
     div.appendChild(img); /*importation des images au parent*/
     div.appendChild(title);
     gallery.appendChild(div);
+    div.setAttribute("data-id", image.id);
   }
 }
 
@@ -82,6 +86,7 @@ filterObjet.addEventListener("click", async function () {
     div.appendChild(img);
     div.appendChild(title);
     gallery.appendChild(div);
+    div.setAttribute("data-id", image.id);
   }
 });
 /* Afficher les projets "Appartements" */
@@ -103,6 +108,7 @@ filterAppartements.addEventListener("click", async function () {
     div.appendChild(img);
     div.appendChild(title);
     gallery.appendChild(div);
+    div.setAttribute("data-id", image.id);
   }
 });
 /* Afficher les projets "hotel & restaurants" */
@@ -126,6 +132,7 @@ filterHotels.addEventListener("click", async function () {
     div.appendChild(img);
     div.appendChild(title);
     gallery.appendChild(div);
+    div.setAttribute("data-id", image.id);
   }
 });
 

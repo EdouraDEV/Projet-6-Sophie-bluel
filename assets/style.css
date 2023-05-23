@@ -573,13 +573,14 @@ input[type="file"] {
 	justify-content: center;
 	align-items: center;
 }
-input[type=password].incorrect-password {
+#contact input[type=password].incorrect-password {
 	font-size: 24px;
 	padding: 0.25em;
-	border: 2px solid #999;
 	animation-name: shake;
-	animation-duration: 0.7s, 0.35s;
+	animation-duration: 0.9s, 0.35s;
 	animation-iteration-count: 1, 2;
+	border: 1px solid red;
+  transition: border-color 0.1s ease-in-out;
   }
   
   @keyframes shake {
